@@ -1,0 +1,10 @@
+version: '2'
+services:
+  lnotes:
+    build: .
+    environment:
+      - "DISPLAY=:0"
+    volumes:
+      - "$HOME/.Xauthority:/root/.Xauthority:rw"
+      - "$HOME/ibm/notes/data:/root/ibm/notes/data"
+    network_mode: "host"
